@@ -1,3 +1,5 @@
+
+import Image from 'next/image';
 import Blogcard from '../../component/Blogcard';
 
 const blogData = [
@@ -20,13 +22,13 @@ const BlogList = () => {
       <p className='text-xl font-normal'>Dive into the world of web development with articles designed for both beginners and experienced developers. 
 This blog covers everything from the basics of web development to more advanced topics like front-end, back-end, and full-stack development.
 
-You’ll find practical tips on building projects, deploying your work, and debugging code. Whether you&apos;re looking to 
+You&apos;ll find practical tips on building projects, deploying your work, and debugging code. Whether you&apos;re looking to 
 start your web development journey or level up your skills, there&apos;s something here for everyone. Explore the posts, learn 
 something new, and start building your future as a web developer today!</p></div>
       <div className="p-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">{blogData.map((blog) => (
         <div className='hover:shadow-2xl hover:scale-105 transition duration-300'>           
          <div className="flex justify-center items-center mb-4">
-        <img src={blog.image} alt={blog.title} className="w-96 h-48  text-3xl font-bold text-[#324c70] object-cover rounded-lg" />
+        <Image src={blog.image} alt={blog.title} className="w-96 h-48  text-3xl font-bold text-[#324c70] object-cover rounded-lg" />
       </div><Blogcard key={blog.id} id={blog.id} title={blog.title} description={blog.description} /></div>
       ))}
     </div></div>
